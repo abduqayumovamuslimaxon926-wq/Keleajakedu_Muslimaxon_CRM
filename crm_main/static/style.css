@@ -1,9 +1,158 @@
-/* Admin panel uchun sodda uslub */
-#header {
-    background: #2a2a2a !important; /* Qora fon */
-    color: #ffffff !important;
+/* ===========================
+   Django Admin Modern Style
+   =========================== */
+
+/* Umumiy fon */
+body {
+    background: #f3f6fb !important;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body {
-    background-color: #f4f4f4 !important;
+/* Header */
+#header {
+    background: linear-gradient(90deg, #2563eb, #1e40af) !important;
+    color: white !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+/* Headerdagi yozuvlar */
+#header a,
+#branding h1,
+#branding h1 a {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Breadcrumb */
+div.breadcrumbs {
+    background: #3b82f6 !important;
+    color: white !important;
+}
+
+/* Sidebar */
+#nav-sidebar {
+    background: white !important;
+    border-right: 1px solid #ddd;
+}
+
+/* Sidebar link */
+#nav-sidebar a {
+    color: #333 !important;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+/* Hover */
+#nav-sidebar a:hover {
+    background: #2563eb !important;
+    color: white !important;
+}
+
+/* Content */
+#content {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+/* Table */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Header */
+thead th {
+    background: #2563eb !important;
+    color: white !important;
+}
+
+/* Table satr */
+tbody tr {
+    transition: .3s;
+}
+
+/* Hover */
+tbody tr:hover {
+    background: #eaf3ff !important;
+}
+
+/* Button */
+.button,
+input[type=submit],
+input[type=button],
+.submit-row input {
+    background: linear-gradient(90deg,#2563eb,#3b82f6) !important;
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    transition: .3s;
+}
+
+/* Button Hover */
+.button:hover,
+input[type=submit]:hover,
+input[type=button]:hover,
+.submit-row input:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37,99,235,.4);
+}
+
+/* Input */
+input,
+textarea,
+select {
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 8px rgba(37,99,235,.3);
+    outline: none;
+}
+
+/* Module */
+.module {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+/* Module title */
+.module h2 {
+    background: linear-gradient(90deg,#2563eb,#3b82f6);
+    color: white;
+    padding: 12px;
+}
+
+/* Message */
+.success {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    border-radius: 10px;
+}
+
+.warning {
+    background: #fef9c3 !important;
+    color: #854d0e !important;
+    border-radius: 10px;
+}
+
+.error {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+    border-radius: 10px;
+}
+
+/* Footer */
+#footer {
+    color: #666;
 }
