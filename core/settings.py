@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dunwh8qi%m_o4***skg0mv1qj1vne2bzoc-e!5#pruh8n&&wrr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['keleajakedu-muslimaxon-crm.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -116,3 +116,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
