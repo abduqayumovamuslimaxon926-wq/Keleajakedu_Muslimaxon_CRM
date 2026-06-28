@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>CRM - Guruhlar Ro'yxati</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; margin: 0; padding: 0; }
+.navbar { background-color: #1a365d; padding: 15px 30px; display: block; overflow: hidden; }
+.navbar-brand { color: white; font-size: 18pt; font-weight: bold; float: left; text-decoration: none; }
+.nav-links { float: right; margin-top: 5px; }
+.nav-links a { color: #edf2f7; text-decoration: none; margin-left: 20px; font-size: 11pt; padding: 8px 15px; border-radius: 4px; }
+.nav-links a:hover, .nav-links a.active { background-color: #48bb78; color: white; }
+.container { padding: 40px; max-width: 1200px; margin: 0 auto; }
+h1 { color: #2d3748; margin-bottom: 25px; font-size: 20pt; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+th { background-color: #2f855a; color: white; font-weight: 600; text-transform: uppercase; font-size: 10pt; letter-spacing: 0.5px; }
+tr:hover { background-color: #f8fafc; }
+.group-badge { background-color: #f0fff4; color: #38a169; padding: 6px 12px; border-radius: 6px; font-weight: bold; }
+</style>
+
+<div class="navbar">
+<a href="#" class="navbar-brand">O'quv Markazi CRM</a>
+<div class="nav-links">
+<a href="/students/">O'quvchilar</a>
+<a href="/groups/" class="active">Guruhlar</a>
+<a href="/admin/" target="_blank">Admin Panel</a>
+</div>
+</div>
+<div class="container">
+<h1>Mavjud Guruhlar</h1>
+<table>
+<thead>
+<tr>
+<th>Guruh Nomi</th>
+<th>Yo'nalish / Fan</th>
+<th>Yaratilgan Sana</th>
+</tr>
+</thead>
+<tbody>
+{% for group in groups %}
+<tr>
+<td><span class="group-badge">{{ group.name }}</span></td>
+<td style="color: #4a5568;">{{ group.subject }}</td>
+<td style="color: #718096;">{{ group.created_at|date:"Y-m-d H:i" }}</td>
+</tr>
+
+5
+
+{% empty %}
+<tr>
+<td colspan="3" style="text-align: center; color: #718096; padding: 30px;">Hozircha guruhlar ochilmagan.</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
